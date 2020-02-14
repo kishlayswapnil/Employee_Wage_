@@ -1,24 +1,19 @@
 #!/bin/bash -x
 echo Welcome To Employee Wage problem.
 
-#usecase to show the daily wage of part time enployee and fulltime employee.
+#usecase to show the daily wage of part time enployee and fulltime employee using case statement.
 #Declaring Varriables.
-isPresent=1
-attendanceCheck=$((RANDOM%2))
-randomValue=$((RANDOM%2))
+randomValue=$((1+RANDOM%2))
 fullTime=1
 wagePerHour=20
-#Logic for checking employee is present or not and if present then find the respective wages.
-if (( attendanceCheck == isPresent ))
-then
-	if (( randomValue == fullTime ))
-	then
+#Logic for checking the respective wages of fulltime and parttime employee.
+case $randomValue in
+	1)
 		totalWage=$((wagePerHour*8))
 		echo "Employee is present and his daily wage is $totalWage"
-	else
+	;;
+	2)
 		partimeWage=$((wagePerHour*4))
 		echo "Employee is present and he works part time and his daily wage is $partimeWage"
-	fi
-else
-	echo Employee is Absent
-fi
+	;;
+esac
