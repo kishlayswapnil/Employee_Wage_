@@ -5,11 +5,12 @@ echo Welcome To Employee Wage problem.
 #Declaring Varriables.
 isPresent=1
 attendanceCheck=$((RANDOM%2))
-
+wagePerHour=20
 #Logic for checking employee is present or not.
 if (( attendanceCheck == isPresent ))
 then
-	echo Employee is Present
+	totalWage=$((wagePerHour*8))
+	echo "Employee is present and his daily wage is $totalWage"
 else
 	echo Employee is Absent
 fi
