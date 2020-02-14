@@ -1,13 +1,12 @@
-#Welcome To Problem Statements Of Employee Wage.
-
 #!/bin/bash -x
-#usecase being solved showing employee is present or not.
+echo Welcome To Employee Wage problem.
 
+#usecase being solved showing employee is present or not.
 #Declaring Varriables.
-IsAbsent=0
-AttendanceCheck=$((RANDOM%2))
+isPresent=1
+attendanceCheck=$((RANDOM%2))
 #Logic for checking employee is present or not.
-if (( AttendanceCheck == 1 ))
+if (( attendanceCheck == isPresent ))
 then
 	echo Employee is Present
 else
