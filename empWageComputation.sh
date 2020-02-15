@@ -12,7 +12,7 @@ function work() {
 
 	#Declaring Varriables.
 	wagePerHour=$1
-   HourCondition=$2
+	HourCondition=$2
 	day=0
 	hour=0
 	while(( day<=MONTH && hour<=HourCondition))
