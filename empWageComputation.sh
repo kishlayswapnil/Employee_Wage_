@@ -8,7 +8,7 @@ WAGEPERHOUR=20
 HOURCONDITION=100
 MONTH=20
 #Declaring varriables.
-day=0
+day=1
 hour=0
 #Logic for checking the working hour under the function.
 function workHour() {
@@ -30,7 +30,7 @@ function dailyWage() {
 	dailyIncome=$(($timeHour*$WAGEPERHOUR))
 	echo $dailyIncome
 }
-while(( day<MONTH && hour<HOURCONDITION ))
+while(( day<=MONTH && hour<HOURCONDITION ))
 do
 	randomValue=$((RANDOM%3))
 	emphour=$(workHour $randomValue)
@@ -43,3 +43,4 @@ done
 salary=$(($WAGEPERHOUR*$hour))
 	echo "Total Salary will be: $salary"
 	echo "Daily income: ${wageArray[@]}"
+	echo "Days: ${!wageArray[@]}"
