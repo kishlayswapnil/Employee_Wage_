@@ -10,6 +10,7 @@ MONTH=20
 #Declaring varriables.
 day=1
 hour=0
+
 #Logic for checking the working hour under the function.
 function workHour() {
 	case $1 in
@@ -39,7 +40,7 @@ do
 	((day++))
 done
 
-#Printing the total salary.
+#Printing the total salary, Daily income and Days as well.
 salary=$(($WAGEPERHOUR*$hour))
 	echo "Total Salary will be: $salary"
 	echo "Daily income: ${wageArray[@]}"
